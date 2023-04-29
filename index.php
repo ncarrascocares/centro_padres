@@ -34,7 +34,7 @@
                 <div class="login-logo">
                 </div>
                 <div class="login-form">
-                    <form method="POST" action="View/index.php">
+                    <form method="POST" action="Controller/loginController.php">
                         <div class="form-group">
                             <label>Email</label>
                             <input name="email" type="email" class="form-control" placeholder="Email">
