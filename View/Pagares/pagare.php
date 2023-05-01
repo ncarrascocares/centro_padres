@@ -8,10 +8,11 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1 class="m-0">Avance por alumnos</h1>
+          <h1 class="m-0">Historial de pagos</h1>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="../Index/index.php">Home</a></li>
             <li class="breadcrumb-item active">Alumnos 1°D</li>
           </ol>
         </div><!-- /.col -->
@@ -23,7 +24,7 @@
   <!-- Main content -->
   <div class="content">
     <div class="container-fluid">
-      <div class="row">
+      <div class="row"> <!-- Este div se cierra en el footer -->
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
@@ -34,11 +35,11 @@
               <table class="table table-bordered">
                 <thead>
                   <tr>
-                    <th style="width: 10px">Item</th>
-                    <th>Nombre Alumno</th>
-                    <th>Nombre Apoderado</th>
-                    <th>Acumulado</th>
-                    <th style="width: 40px">%</th>
+                    <th style="width: 10px">N°</th>
+                    <th>Responsable del pago</th>
+                    <th>Nombre del alumno</th>
+                    <th>Cantidad pagada</th>
+                    <th style="width: 40px">Opciones</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -53,21 +54,21 @@
                     <td>2.</td>
                     <td>Gohan Alexis</td>
                     <td>Lionel Messi</td>
-                    <th>$120.000</th>
+                    <th>$12000</th>
                     <td><span class="badge bg-danger">100%</span></td>
                   </tr>
                   <tr>
                     <td>3.</td>
                     <td>Pepito José</td>
                     <td>Juanito Pepito</td>
-                    <th>$120.000</th>
+                    <th>$10000</th>
                     <td><span class="badge bg-danger">100%</span></td>
                   </tr>
                   <tr>
                     <td>4.</td>
                     <td>Juanito Perez</td>
                     <td>Juana Perez</td>
-                    <th>$120.000</th>
+                    <th>$5000</th>
                     <td><span class="badge bg-danger">100%</span></td>
                   </tr>
                 </tbody>
@@ -75,5 +76,4 @@
             </div>
           </div>
         </div>
-
         <?php include_once '../Comunes/footer.php'; ?>
