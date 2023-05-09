@@ -1,3 +1,4 @@
+<?php $respuesta = $_GET['id']  ?>
 <!doctype html>
 <html class="no-js" lang="en">
 <!--<![endif]-->
@@ -55,7 +56,8 @@
     <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
     <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="index.js"></script>
 
 </body>
 

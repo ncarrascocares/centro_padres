@@ -25,6 +25,7 @@ class Usuario{
             $datos = $sentencia->fetch();
             $_SESSION['nombre'] = $datos['nombre'];
             $_SESSION['apellido'] = $datos['apellido'];
+            $_SESSION['cargo'] = $datos['cargo'];
             //echo $_SESSION['nombre'];
             //echo $_SESSION['apellido'];
             //die();

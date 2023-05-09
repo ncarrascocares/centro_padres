@@ -20,7 +20,7 @@ if($email != '' && $password != ''){
         header('Location: ../View/Index/index.php');
     }
 }else{
-    header('Location: ../index.php');
+    header('Location: ../index.php?id=1');
 }
 
 include_once 'Comunes/footer.php';
