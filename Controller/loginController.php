@@ -1,4 +1,5 @@
 <?php
+session_start();
 include_once '../Model/conexion.php';
 include_once '../Model/ModeloUsuario.php';
 include_once 'Comunes/header.php';
@@ -14,6 +15,8 @@ if($email != '' && $password != ''){
         header('Location: ../index.php');
         exit;
     }else{
+        session_start();
+        $_SESSION['usuario'] = '';
         header('Location: ../View/Index/index.php');
     }
 }else{

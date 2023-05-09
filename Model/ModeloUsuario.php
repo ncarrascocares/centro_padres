@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'conexion.php';
 
 class Usuario{
@@ -18,6 +19,15 @@ class Usuario{
         $sentencia->execute(array(':correo'=>$correo,'password'=>$password));
         
         if($sentencia->rowCount() > 0){
+            $consulta = 'SELECT nombre, apellido FROM user WHERE correo = :correo';
+            $sentencia = $this->pdo->prepare($consulta);
+            $sentencia->execute(array(':correo'=>$correo));
+            $datos = $sentencia->fetch();
+            $_SESSION['nombre'] = $datos['nombre'];
+            $_SESSION['apellido'] = $datos['apellido'];
+            //echo $_SESSION['nombre'];
+            //echo $_SESSION['apellido'];
+            //die();
             return "aprobado";
         }else{
             return "no-aprobado";

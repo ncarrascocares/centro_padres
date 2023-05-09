@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include_once '../Comunes/header.php'; ?>
 <?php include_once '../Comunes/nav.php'; ?>
 
