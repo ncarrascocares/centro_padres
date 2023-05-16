@@ -1,4 +1,12 @@
-<?php $respuesta = $_GET['id']  ?>
+<?php 
+
+if (isset($_GET['id'])) {
+    $respuesta = $_GET['id'];
+}else{
+    $respuesta = NULL;
+}
+
+?>
 <!doctype html>
 <html class="no-js" lang="en">
 <!--<![endif]-->
@@ -14,11 +22,11 @@
     <link rel="shortcut icon" href="favicon.ico">
 
 
-    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
+    <link rel="stylesheet" href="assets/vendors/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <link rel="stylesheet" href="assets/vendors/flag-icon-css/css/flag-icon.min.css">
+    <link rel="stylesheet" href="assets/vendors/selectFX/css/cs-skin-elastic.css">
 
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -45,6 +53,9 @@
                             <input name="password" type="password" class="form-control" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Ingresar</button>
+                        <?php if($respuesta == NULL):?>
+                        <button type="submit" class="btn btn-warning btn-flat m-b-30 m-t-30">Registrarse</button>
+                        <?php endif;?>
                     </form>
                 </div>
             </div>
@@ -52,9 +63,9 @@
     </div>
 
 
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="assets/vendors/jquery/dist/jquery.min.js"></script>
+    <script src="assets/vendors/popper.js/dist/umd/popper.min.js"></script>
+    <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="index.js"></script>
