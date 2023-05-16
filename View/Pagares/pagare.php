@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php 
+session_start();
+$cargo = $_SESSION['cargo'];
+?>
 <?php include_once '../Comunes/header.php'; ?>
 <?php include_once '../Comunes/nav.php'; ?>
 
@@ -29,7 +32,7 @@
         <div class="col-md-12">
           <div class="card">
             <div class="card-header">
-              <h3 class="card-title">Bordered Table</h3>
+              <div id="btn-pagare"></div>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -78,3 +81,4 @@
           </div>
         </div>
         <?php include_once '../Comunes/footer.php'; ?>
+        <script src="pagare.js"></script>

@@ -19,13 +19,13 @@ class Usuario{
         $sentencia->execute(array(':correo'=>$correo,'password'=>$password));
         
         if($sentencia->rowCount() > 0){
-            $consulta = 'SELECT nombre, apellido FROM user WHERE correo = :correo';
+            $consulta = 'SELECT * FROM user WHERE correo = :correo';
             $sentencia = $this->pdo->prepare($consulta);
             $sentencia->execute(array(':correo'=>$correo));
             $datos = $sentencia->fetch();
             $_SESSION['nombre'] = $datos['nombre'];
             $_SESSION['apellido'] = $datos['apellido'];
-            $_SESSION['cargo'] = $datos['cargo'];
+            $_SESSION['cargo'] = $datos['cargo_id'];
             //echo $_SESSION['nombre'];
             //echo $_SESSION['apellido'];
             //die();
