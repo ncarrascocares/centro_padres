@@ -1,8 +1,8 @@
-<?php 
+<?php
 
 if (isset($_GET['id'])) {
     $respuesta = $_GET['id'];
-}else{
+} else {
     $respuesta = NULL;
 }
 
@@ -43,7 +43,10 @@ if (isset($_GET['id'])) {
                 <div class="login-logo">
                 </div>
                 <div class="login-form">
-                    <form method="POST" action="Controller/loginController.php">
+                    <div class="alert alert-danger text-center" id="correo_no_valido" style="display:none;">
+                        <span><i class="fas fa-check"></i>Error, Cooreo no es valido</span>
+                    </div>
+                    <form id="logeo">
                         <div class="form-group">
                             <label>Email</label>
                             <input name="email" type="email" class="form-control" placeholder="Email">
@@ -53,9 +56,7 @@ if (isset($_GET['id'])) {
                             <input name="password" type="password" class="form-control" placeholder="Password">
                         </div>
                         <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30">Ingresar</button>
-                        <?php if($respuesta == NULL):?>
-                        <button type="submit" class="btn btn-warning btn-flat m-b-30 m-t-30">Registrarse</button>
-                        <?php endif;?>
+                        <button type="" class="btn btn-warning btn-flat m-b-30 m-t-30">Registrarse</button>
                     </form>
                 </div>
             </div>
